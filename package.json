@@ -1,0 +1,19 @@
+{
+  "name": "super-secret-bot",
+  "version": "1.0.0",
+  "description": "Super Secret Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "im2rnado",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.11.0",
+    "fnbr": "^1.4.0",
+    "fs": "0.0.1-security",
+    "request-promise": "^4.2.6"
+  }
+}
