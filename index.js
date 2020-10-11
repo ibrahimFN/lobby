@@ -38,27 +38,25 @@ bot.once('ready', () => {
 			inviteaccept: true,
 			platform: 'WIN',
 		}, null, 2));
-		console.log('\x1b[31mWARNING: config.json was missing and created. Please fill it out\x1b[0m');
+		console.log('WARNING: config.json was missing and created. Please fill it out');
 		return;
 	}
 
-	console.log('\x1b[36mLobbyBot made by im2rnado. Massive credit to This Nils, Alex and xMistt for creating the library.');
+	console.log('LobbyBot made by im2rnado. Massive credit to This Nils, Alex and xMistt for creating the library.');
 	console.log('Twitter Account: https://twitter.com/im2rnado - For support, questions, etc.\x1b[0m');
 
-	process.stdout.write('\x1b[33mFetching cosmetics...\x1b[0m');
+	console.log('Fetching cosmetics...');
 	let cosmetics;
 	try {
 		cosmetics = (await get({ url: 'https://fortnite-api.com/v2/cosmetics/br', json: true })).data;
 	}
 	catch (e) {
-		process.stdout.clearLine();
-		process.stdout.cursorTo(0);
-		console.log('\x1b[31mFailed fetching cosmetics!\x1b[0m');
+		console.log('Failed fetching cosmetics!');
 		return;
 	}
 	process.stdout.clearLine();
 	process.stdout.cursorTo(0);
-	console.log('\x1b[32mSuccessfully fetched cosmetics!\x1b[0m');
+	console.log('Successfully fetched cosmetics!');
 
 	const defaultCosmetics = {
 		outfit: cosmetics.find((c) => c.name === config.outfit && c.type.value === 'outfit'),
@@ -69,7 +67,7 @@ bot.once('ready', () => {
 
 	for (const key of Object.keys(defaultCosmetics)) {
 		if (!defaultCosmetics[key]) {
-			console.log(`\x1b[31mWARNING: ${key} in config wasn't found! Please check the spelling\x1b[0m`);
+			console.log(`WARNING: ${key} in config wasn't found! Please check the spelling`);
 			return;
 		}
 	}
@@ -96,11 +94,9 @@ bot.once('ready', () => {
 
 	const client = new Client(clientOptions);
 	client.on('deviceauth:created', (da) => writeFile('./deviceAuth.json', JSON.stringify(da, null, 2)));
-	process.stdout.write('\x1b[33mBot starting...\x1b[0m');
+	console.log('Bot starting...');
 	await client.login();
-	process.stdout.clearLine();
-	process.stdout.cursorTo(0);
-	console.log(`\x1b[32mBot started as ${client.user.displayName}!\x1b[0m`);
+	console.log(`Bot started as ${client.user.displayName}!`);
 
 	function randomStatus() {
 		const status = ['+help', `${bot.users.cache.size} users`];
