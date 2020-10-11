@@ -146,6 +146,7 @@ bot.once('ready', () => {
 			if (skin) {
 				client.party.me.setOutfit(skin.id);
 				embed.setTitle(`Set skin to ${content}`);
+                                embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${skin.id}`);
 				message.channel.send(embed);
 			}
 			else {
@@ -158,6 +159,7 @@ bot.once('ready', () => {
 			if (emote) {
 				client.party.me.setEmote(emote.id);
 				embed.setTitle(`Set emote to ${content}`);
+                                embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${emote.id}`);
 				message.channel.send(embed);
 			}
 			else {
@@ -170,6 +172,7 @@ bot.once('ready', () => {
 			if (pickaxe) {
 				client.party.me.setPickaxe(pickaxe.id);
 				embed.setTitle(`Set pickaxe to ${content}`);
+                                embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${pickaxe.id}`);
 				message.channel.send(embed);
 			}
 			else {
