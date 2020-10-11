@@ -193,11 +193,13 @@ bot.once('ready', () => {
 		else if (command === 'purpleskull' || command === 'ps') {
 			client.party.me.setOutfit('CID_030_Athena_Commando_M_Halloween', [{ channel: 'ClothingColor', variant: 'Mat1' }]);
 			embed.setTitle('Set skin to Purple Skull');
+                                embed.setThumbnail('http://blobry.herokuapp.com/api/cosmetics/icon/CID_030_Athena_Commando_M_Halloween');
 			message.channel.send(embed);
 		}
 		else if (command === 'pinkghoul' || command === 'pg') {
 			client.party.me.setOutfit('CID_029_Athena_Commando_F_Halloween', [{ channel: 'Material', variant: 'Mat3' }]);
 			embed.setTitle('Set skin to Pink Ghoul');
+                                embed.setThumbnail('http://blobry.herokuapp.com/api/cosmetics/icon/CID_029_Athena_Commando_F_Halloween');
 			message.channel.send(embed);
 		}
 		else if (command === 'level') {
