@@ -54,8 +54,6 @@ bot.once('ready', () => {
 		console.log('Failed fetching cosmetics!');
 		return;
 	}
-	process.stdout.clearLine();
-	process.stdout.cursorTo(0);
 	console.log('Successfully fetched cosmetics!');
 
 	const defaultCosmetics = {
