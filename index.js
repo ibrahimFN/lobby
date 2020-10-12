@@ -38,12 +38,12 @@ bot.once('ready', () => {
 			inviteaccept: true,
 			platform: 'IOS',
 		}, null, 2));
-		console.log('WARNING: config.json was missing and created. Please fill it out');
+		console.log('WARNING: config.json was missing and created. Please adjust it to your preference.');
 		return;
 	}
 
-	console.log('LobbyBot made by im2rnado. Massive credit to This Nils, Alex and xMistt for creating the library.');
-	console.log('Twitter Account: https://twitter.com/im2rnado - For support, questions, etc.\x1b[0m');
+	console.log('BlazeBot made by im2rnado. Massive credit to This Nils, Alex and xMistt for creating the library.');
+	console.log('Twitter Account: https://twitter.com/im2rnadoo - For support, questions, etc.\x1b[0m');
 
 	console.log('Fetching cosmetics...');
 	let cosmetics;
@@ -76,7 +76,7 @@ bot.once('ready', () => {
 		cachePresences: false,
 		kairos: {
 			cid: defaultCosmetics.outfit.id,
-			color: Enums.KairosColor.GRAY,
+			color: Enums.KairosColor.DARK_PURPLE,
 		},
 		keepAliveInterval: 30,
 		auth: {},
