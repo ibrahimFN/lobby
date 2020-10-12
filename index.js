@@ -106,7 +106,7 @@ bot.once('ready', () => {
 
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
-		.setTitle('Bot is online and started as ${client.user.displayName}!');
+		.setTitle(`Bot is online and started as ${client.user.displayName}!`);
 	bot.channels.cache.get('764779626202398755').send(embed12);
 	await client.party.me.setOutfit(defaultCosmetics.outfit.id);
 	await client.party.me.setBackpack(defaultCosmetics.backpack.id);
@@ -154,6 +154,12 @@ bot.once('ready', () => {
 				message.channel.send(embed);
 			}
 		}
+		else if (command === 'cid') {
+			client.party.me.setOutfit(content);
+			embed.setTitle(`Set skin to ${content}`);
+			embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${content}`);
+			message.channel.send(embed);
+		}
 		else if (command === 'emote' || command === 'dance') {
 			const emote = findCosmetic(content, 'emote');
 			if (emote) {
@@ -167,6 +173,12 @@ bot.once('ready', () => {
 				message.channel.send(embed);
 			}
 		}
+		else if (command === 'eid') {
+			client.party.me.setOutfit(content);
+			embed.setTitle(`Set skin to ${content}`);
+			embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${content}`);
+			message.channel.send(embed);
+		}
 		else if (command === 'pickaxe') {
 			const pickaxe = findCosmetic(content, 'pickaxe');
 			if (pickaxe) {
@@ -179,6 +191,12 @@ bot.once('ready', () => {
 				embed.setTitle(`Pickaxe ${content} wasn't found!`);
 				message.channel.send(embed);
 			}
+		}
+		else if (command === 'pid') {
+			client.party.me.setOutfit(content);
+			embed.setTitle(`Set skin to ${content}`);
+			embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${content}`);
+			message.channel.send(embed);
 		}
 		else if (command === 'ready') {
 			client.party.me.setReadiness(true);
