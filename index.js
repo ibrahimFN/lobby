@@ -36,7 +36,7 @@ bot.once('ready', () => {
 			status: 'Use Code: im2rnado',
 			friendaccept: true,
 			inviteaccept: true,
-			platform: 'WIN',
+			platform: 'IOS',
 		}, null, 2));
 		console.log('WARNING: config.json was missing and created. Please fill it out');
 		return;
