@@ -106,7 +106,7 @@ bot.once('ready', () => {
 
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
-		.setTitle(`Bot is online and started as ${client.user.displayName}!`);
+		.setTitle(`Bot is online and started as **${client.user.displayName}**!`);
 	bot.channels.cache.get('764779626202398755').send(embed12);
 	await client.party.me.setOutfit(defaultCosmetics.outfit.id);
 	await client.party.me.setBackpack(defaultCosmetics.backpack.id);
@@ -118,12 +118,20 @@ bot.once('ready', () => {
 		if (config.friendaccept) req.accept();
 		else req.decline();
 		console.log(`${config.friendaccept ? 'Accepted' : 'Declined'} friend request from: ${req.displayName}`);
+		const embed99 = new Discord.MessageEmbed()
+			.setColor('RANDOM')
+			.setTitle(`${config.friendaccept ? 'Accepted' : 'Declined'} friend request from: ${req.displayName}`);
+		bot.channels.cache.get('764779626202398755').send(embed99);
 	});
 
 	client.on('party:invite', (inv) => {
 		if (config.inviteaccept) inv.accept();
 		else inv.decline();
 		console.log(`${config.inviteaccept ? 'Accepted' : 'Declined'} party invite from: ${inv.sender.displayName}`);
+		const embed98 = new Discord.MessageEmbed()
+			.setColor('RANDOM')
+			.setTitle(`${config.inviteaccept ? 'Accepted' : 'Declined'} party invite from: ${inv.sender.displayName}`);
+		bot.channels.cache.get('764779626202398755').send(embed98);
 	});
 
 	client.on('party:member:joined', () => {
