@@ -154,7 +154,7 @@ bot.once('ready', () => {
 			if (skin) {
 				client.party.me.setOutfit(skin.id);
 				embed.setTitle(`Set skin to ${content}`);
-				embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${skin.id}`);
+				embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${skin.id}`);
 				message.channel.send(embed);
 			}
 			else {
@@ -166,7 +166,7 @@ bot.once('ready', () => {
 		else if (command === 'cid') {
 			client.party.me.setOutfit(content);
 			embed.setTitle(`Set skin to ${content}`);
-			embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${content}`);
+			embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${content}`);
 			message.channel.send(embed);
 		}
 		else if (command === 'emote' || command === 'dance') {
@@ -174,7 +174,7 @@ bot.once('ready', () => {
 			if (emote) {
 				client.party.me.setEmote(emote.id);
 				embed.setTitle(`Set emote to ${content}`);
-				embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${emote.id}`);
+				embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${emote.id}`);
 				message.channel.send(embed);
 			}
 			else {
@@ -184,9 +184,9 @@ bot.once('ready', () => {
 			}
 		}
 		else if (command === 'eid') {
-			client.party.me.setOutfit(content);
-			embed.setTitle(`Set skin to ${content}`);
-			embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${content}`);
+			client.party.me.setEmote(content);
+			embed.setTitle(`Set emote to ${content}`);
+			embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${content}`);
 			message.channel.send(embed);
 		}
 		else if (command === 'pickaxe') {
@@ -194,7 +194,7 @@ bot.once('ready', () => {
 			if (pickaxe) {
 				client.party.me.setPickaxe(pickaxe.id);
 				embed.setTitle(`Set pickaxe to ${content}`);
-				embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${pickaxe.id}`);
+				embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${pickaxe.id}`);
 				message.channel.send(embed);
 			}
 			else {
@@ -204,19 +204,21 @@ bot.once('ready', () => {
 			}
 		}
 		else if (command === 'pid') {
-			client.party.me.setOutfit(content);
-			embed.setTitle(`Set skin to ${content}`);
-			embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${content}`);
+			client.party.me.setPickaxe(content);
+			embed.setTitle(`Set pickaxe to ${content}`);
+			embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${content}`);
 			message.channel.send(embed);
 		}
 		else if (command === 'ready') {
 			client.party.me.setReadiness(true);
 			embed.setTitle('Ready!');
+                        embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
 			message.channel.send(embed);
 		}
 		else if (command === 'unready') {
 			client.party.me.setReadiness(false);
 			embed.setTitle('Unready!');
+                        embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
 			message.channel.send(embed);
 		}
 		else if (command === 'purpleskull' || command === 'ps') {
@@ -234,6 +236,7 @@ bot.once('ready', () => {
 		else if (command === 'level') {
 			client.party.me.setLevel(parseInt(content, 10));
 			embed.setTitle(`Set level to ${content}`);
+                        embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
 			message.channel.send(embed);
 		}
 	});
