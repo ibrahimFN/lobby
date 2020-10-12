@@ -154,7 +154,7 @@ bot.once('ready', () => {
 			const skin = findCosmetic(content, 'outfit');
 			if (skin) {
 				client.party.me.setOutfit(skin.id);
-				embed.setTitle(`Set skin to ${content}`);
+				embed.setTitle(`Set skin to ${skin.name}`);
 				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${skin.id}/icon.png`);
 				message.channel.send(embed);
 			}
@@ -174,7 +174,7 @@ bot.once('ready', () => {
 			const emote = findCosmetic(content, 'emote');
 			if (emote) {
 				client.party.me.setEmote(emote.id);
-				embed.setTitle(`Set emote to ${content}`);
+				embed.setTitle(`Set emote to ${emote.name}`);
 				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${emote.id}/icon.png`);
 				message.channel.send(embed);
 			}
@@ -194,7 +194,7 @@ bot.once('ready', () => {
 			const pickaxe = findCosmetic(content, 'pickaxe');
 			if (pickaxe) {
 				client.party.me.setPickaxe(pickaxe.id);
-				embed.setTitle(`Set pickaxe to ${content}`);
+				embed.setTitle(`Set pickaxe to ${pickaxe.name}`);
 				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${pickaxe.id}/icon.png`);
 				message.channel.send(embed);
 			}
