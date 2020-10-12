@@ -155,7 +155,7 @@ bot.once('ready', () => {
 			if (skin) {
 				client.party.me.setOutfit(skin.id);
 				embed.setTitle(`Set skin to ${content}`);
-				embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${skin.id}/icon.png`);
+				embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${skin.id}/icon.png`);
 				message.channel.send(embed);
 			}
 			else {
@@ -167,7 +167,7 @@ bot.once('ready', () => {
 		else if (command === 'cid') {
 			client.party.me.setOutfit(content);
 			embed.setTitle(`Set skin to ${content}`);
-			embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${content}/icon.png`);
+			embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${content}/icon.png`);
 			message.channel.send(embed);
 		}
 		else if (command === 'emote' || command === 'dance') {
@@ -175,7 +175,7 @@ bot.once('ready', () => {
 			if (emote) {
 				client.party.me.setEmote(emote.id);
 				embed.setTitle(`Set emote to ${content}`);
-				embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${emote.id}/icon.png`);
+				embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${emote.id}/icon.png`);
 				message.channel.send(embed);
 			}
 			else {
@@ -187,7 +187,7 @@ bot.once('ready', () => {
 		else if (command === 'eid') {
 			client.party.me.setEmote(content);
 			embed.setTitle(`Set emote to ${content}`);
-			embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${content}/icon.png`);
+			embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${content}/icon.png`);
 			message.channel.send(embed);
 		}
 		else if (command === 'pickaxe') {
@@ -195,7 +195,7 @@ bot.once('ready', () => {
 			if (pickaxe) {
 				client.party.me.setPickaxe(pickaxe.id);
 				embed.setTitle(`Set pickaxe to ${content}`);
-				embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${pickaxe.id}/icon.png`);
+				embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${pickaxe.id}/icon.png`);
 				message.channel.send(embed);
 			}
 			else {
@@ -207,7 +207,7 @@ bot.once('ready', () => {
 		else if (command === 'pid') {
 			client.party.me.setPickaxe(content);
 			embed.setTitle(`Set pickaxe to ${content}`);
-			embed.setThumbnail(`https://fortnite-api.com/v2/cosmetics/br/${content}/icon.png`);
+			embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${content}/icon.png`);
 			message.channel.send(embed);
 		}
 		else if (command === 'ready') {
@@ -225,13 +225,13 @@ bot.once('ready', () => {
 		else if (command === 'purpleskull' || command === 'ps') {
 			client.party.me.setOutfit('CID_030_Athena_Commando_M_Halloween', [{ channel: 'ClothingColor', variant: 'Mat1' }]);
 			embed.setTitle('Set skin to Purple Skull');
-			embed.setThumbnail('http://blobry.herokuapp.com/api/cosmetics/icon/CID_030_Athena_Commando_M_Halloween/icon.png');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_030_Athena_Commando_M_Halloween/icon.png');
 			message.channel.send(embed);
 		}
 		else if (command === 'pinkghoul' || command === 'pg') {
 			client.party.me.setOutfit('CID_029_Athena_Commando_F_Halloween', [{ channel: 'Material', variant: 'Mat3' }]);
 			embed.setTitle('Set skin to Pink Ghoul');
-			embed.setThumbnail('http://blobry.herokuapp.com/api/cosmetics/icon/CID_029_Athena_Commando_F_Halloween/icon.png');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_029_Athena_Commando_F_Halloween/icon.png');
 			message.channel.send(embed);
 		}
 		else if (command === 'level') {
