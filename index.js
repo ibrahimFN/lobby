@@ -10,7 +10,7 @@ bot.sessions = new Discord.Collection();
 
 const embed = new Discord.MessageEmbed()
 	.setColor('#8B008B')
-	.setFooter('LoobyBot ❤ Use Code: im2rnado');
+	.setFooter('BlazeBot ❤ Use Code: im2rnado');
 
 bot.once('ready', () => {
 	bot.user.setActivity('Starting...', { type: 'LISTENING' });
@@ -106,7 +106,7 @@ bot.once('ready', () => {
 
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
-		.setTitle('Bot is online :)');
+		.setTitle('Bot is online and started as ${client.user.displayName}!');
 	bot.channels.cache.get('764779626202398755').send(embed12);
 	await client.party.me.setOutfit(defaultCosmetics.outfit.id);
 	await client.party.me.setBackpack(defaultCosmetics.backpack.id);
@@ -146,7 +146,7 @@ bot.once('ready', () => {
 			if (skin) {
 				client.party.me.setOutfit(skin.id);
 				embed.setTitle(`Set skin to ${content}`);
-                                embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${skin.id}`);
+				embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${skin.id}`);
 				message.channel.send(embed);
 			}
 			else {
@@ -159,7 +159,7 @@ bot.once('ready', () => {
 			if (emote) {
 				client.party.me.setEmote(emote.id);
 				embed.setTitle(`Set emote to ${content}`);
-                                embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${emote.id}`);
+				embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${emote.id}`);
 				message.channel.send(embed);
 			}
 			else {
@@ -172,7 +172,7 @@ bot.once('ready', () => {
 			if (pickaxe) {
 				client.party.me.setPickaxe(pickaxe.id);
 				embed.setTitle(`Set pickaxe to ${content}`);
-                                embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${pickaxe.id}`);
+				embed.setThumbnail(`http://blobry.herokuapp.com/api/cosmetics/icon/${pickaxe.id}`);
 				message.channel.send(embed);
 			}
 			else {
@@ -193,13 +193,13 @@ bot.once('ready', () => {
 		else if (command === 'purpleskull' || command === 'ps') {
 			client.party.me.setOutfit('CID_030_Athena_Commando_M_Halloween', [{ channel: 'ClothingColor', variant: 'Mat1' }]);
 			embed.setTitle('Set skin to Purple Skull');
-                                embed.setThumbnail('http://blobry.herokuapp.com/api/cosmetics/icon/CID_030_Athena_Commando_M_Halloween');
+			embed.setThumbnail('http://blobry.herokuapp.com/api/cosmetics/icon/CID_030_Athena_Commando_M_Halloween');
 			message.channel.send(embed);
 		}
 		else if (command === 'pinkghoul' || command === 'pg') {
 			client.party.me.setOutfit('CID_029_Athena_Commando_F_Halloween', [{ channel: 'Material', variant: 'Mat3' }]);
 			embed.setTitle('Set skin to Pink Ghoul');
-                                embed.setThumbnail('http://blobry.herokuapp.com/api/cosmetics/icon/CID_029_Athena_Commando_F_Halloween');
+			embed.setThumbnail('http://blobry.herokuapp.com/api/cosmetics/icon/CID_029_Athena_Commando_F_Halloween');
 			message.channel.send(embed);
 		}
 		else if (command === 'level') {
