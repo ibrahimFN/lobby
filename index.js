@@ -136,6 +136,7 @@ bot.once('ready', () => {
 
 	client.on('party:member:joined', () => {
 		client.party.me.setEmote(defaultCosmetics.emote.id);
+                
 	});
 
 	const findCosmetic = (query, type) => {
