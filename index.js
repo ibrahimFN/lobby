@@ -97,7 +97,7 @@ bot.once('ready', () => {
 	console.log(`Bot started as ${client.user.displayName}!`);
 
 	function randomStatus() {
-		const status = ['+help', `${bot.users.cache.size} users`];
+		const status = ['People who use code: im2rnado', `${bot.users.cache.size} users`];
 		const rstatus = Math.floor(Math.random() * status.length);
 
 		// You can change the "WATCHING" into STREAMING, LISTENING, and PLAYING.
@@ -151,6 +151,7 @@ bot.once('ready', () => {
 		const content = args.join(' ');
 
 		if (command === 'skin' || command === 'outfit') {
+			if (!args.length) return embed.setTitle('Please enter a valid skin name!');
 			const skin = findCosmetic(content, 'outfit');
 			if (skin) {
 				client.party.me.setOutfit(skin.id);
@@ -165,12 +166,14 @@ bot.once('ready', () => {
 			}
 		}
 		else if (command === 'cid') {
+			if (!args.length) return embed.setTitle('Please enter a valid cid!');
 			client.party.me.setOutfit(content);
 			embed.setTitle(`Set skin to\n**${content}**`);
 			embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${content}/icon.png`);
 			message.channel.send(embed);
 		}
 		else if (command === 'emote' || command === 'dance') {
+			if (!args.length) return embed.setTitle('Please enter a valid emote name!');
 			const emote = findCosmetic(content, 'emote');
 			if (emote) {
 				client.party.me.setEmote(emote.id);
@@ -185,12 +188,14 @@ bot.once('ready', () => {
 			}
 		}
 		else if (command === 'eid') {
+			if (!args.length) return embed.setTitle('Please enter a valid eid!');
 			client.party.me.setEmote(content);
 			embed.setTitle(`Set emote to **${content}**`);
 			embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${content}/icon.png`);
 			message.channel.send(embed);
 		}
 		else if (command === 'backbling' || command === 'backpack') {
+			if (!args.length) return embed.setTitle('Please enter a valid backbling name!');
 			const backbling = findCosmetic(content, 'backpack');
 			if (backbling) {
 				client.party.me.setBackpack(backbling.id);
@@ -205,12 +210,14 @@ bot.once('ready', () => {
 			}
 		}
 		else if (command === 'bid') {
+			if (!args.length) return embed.setTitle('Please enter a valid bid!');
 			client.party.me.setBackpack(content);
 			embed.setTitle(`Set backbling to **${content}**`);
 			embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${content}/icon.png`);
 			message.channel.send(embed);
 		}
 		else if (command === 'pickaxe') {
+			if (!args.length) return embed.setTitle('Please enter a valid pickaxe name!');
 			const pickaxe = findCosmetic(content, 'pickaxe');
 			if (pickaxe) {
 				client.party.me.setPickaxe(pickaxe.id);
@@ -226,6 +233,7 @@ bot.once('ready', () => {
 			}
 		}
 		else if (command === 'pid') {
+			if (!args.length) return embed.setTitle('Please enter a valid pid!');
 			client.party.me.setPickaxe(content);
 			client.party.me.setEmote('EID_IceKing');
 			embed.setTitle(`Set pickaxe to **${content}**`);
@@ -254,6 +262,12 @@ bot.once('ready', () => {
 			client.party.me.setOutfit('CID_029_Athena_Commando_F_Halloween', [{ channel: 'Material', variant: 'Mat3' }]);
 			embed.setTitle('Set skin to **Pink Ghoul**');
 			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_029_Athena_Commando_F_Halloween/icon.png');
+			message.channel.send(embed);
+		}
+		else if (command === 'hologram') {
+			client.party.me.setOutfit('CID_VIP_Athena_Commando_M_GalileoGondola_SG');
+			embed.setTitle('Set skin to **Hologram**');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_VIP_Athena_Commando_M_GalileoGondola_SG/icon.png');
 			message.channel.send(embed);
 		}
 		else if (command === 'leaked') {
@@ -326,9 +340,32 @@ bot.once('ready', () => {
 			}
 		}
 		else if (command === 'level') {
+			const levelno = args[0];
+			if (!levelno || isNaN(levelno)) return embed.setTitle('Please enter a level number!');
 			client.party.me.setLevel(parseInt(content, 10));
 			embed.setTitle(`Set level to ${content}`);
 			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+			message.channel.send(embed);
+		}
+		else if (command === 'invite') {
+			const user = args.join(' ');
+			if (!user) return embed.setTitle('Please provide a user to invite.');
+			client.party.invite(user);
+			embed.setTitle(`**${user}** has been invited`);
+			message.channel.send(embed);
+		}
+		else if (command === 'add') {
+			const user = args.join(' ');
+			if (!user) return embed.setTitle('Please provide a user to add.');
+			client.addFriend(user);
+			embed.setTitle(`Friend request has been sent to **${user}**`);
+			message.channel.send(embed);
+		}
+		else if (command === 'gift') {
+			const user = args.join(' ');
+			if (!user) return embed.setTitle('Please provide a user to gift.');
+			client.party.me.setEmote('EID_NeverGonna');
+			embed.setTitle(`I gifted **${user}** the whole shop! If it isn't there, make sure you're using Code: im2rnado in the Item Shop!`);
 			message.channel.send(embed);
 		}
 	});
