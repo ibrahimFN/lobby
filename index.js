@@ -171,7 +171,7 @@ bot.once('ready', () => {
 			}
 			else {
 				embed.setTitle(`Skin **${content}** wasn't found!`);
-				embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+				embed.setThumbnail('https://emoji.gg/assets/emoji/x.png');
 				message.channel.send(embed);
 			}
 		}
@@ -193,7 +193,7 @@ bot.once('ready', () => {
 			}
 			else {
 				embed.setTitle(`Emote **${content}** wasn't found!`);
-				embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+				embed.setThumbnail('https://emoji.gg/assets/emoji/x.png');
 				message.channel.send(embed);
 			}
 		}
@@ -215,7 +215,7 @@ bot.once('ready', () => {
 			}
 			else {
 				embed.setTitle(`Backbling **${content}** wasn't found!`);
-				embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+				embed.setThumbnail('https://emoji.gg/assets/emoji/x.png');
 				message.channel.send(embed);
 			}
 		}
@@ -238,7 +238,7 @@ bot.once('ready', () => {
 			}
 			else {
 				embed.setTitle(`Pickaxe **${content}** wasn't found!`);
-				embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+				embed.setThumbnail('https://emoji.gg/assets/emoji/x.png');
 				message.channel.send(embed);
 			}
 		}
