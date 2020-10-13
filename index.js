@@ -373,11 +373,14 @@ bot.once('ready', () => {
 			message.channel.send(embed);
 		}
 		else if (command === 'help') {
-			embed.setTitle(':mailbox_with_mail: Hey! Want some help?');
-			embed.setDescription('[Press Me](https://github.com/Im2rnado/Blaze-Help)');
-			embed.setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
-			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
-			message.channel.send(embed);
+                        const embed1 = new Discord.MessageEmbed();
+                        embed1.setColor('#E38C2D');
+	                embed1.setFooter('BlazeBot ❤ EPIC: Code im2rnado');
+			embed1.setTitle(':mailbox_with_mail: Hey! Want some help?');
+			embed1.setDescription('[Press Me](https://github.com/Im2rnado/Blaze-Help)');
+			embed1.setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
+			embed1.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+			message.channel.send(embed1);
 		}
 	});
 
