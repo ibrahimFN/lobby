@@ -9,7 +9,7 @@ bot.commands = new Discord.Collection();
 bot.sessions = new Discord.Collection();
 
 const embed = new Discord.MessageEmbed()
-	.setColor('#8B008B')
+	.setColor('#E38C2D')
 	.setFooter('BlazeBot ❤ EPIC: Code im2rnado');
 
 bot.once('ready', () => {
@@ -145,6 +145,7 @@ bot.once('ready', () => {
 	};
 
 	bot.on('message', message => {
+		if (message.content.indexOf(process.env.PREFIX) !== 0 || message.author.bot) return;
 
 		const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/);
 		const command = args.shift().toLowerCase();
