@@ -10,8 +10,7 @@ bot.sessions = new Discord.Collection();
 
 const embed = new Discord.MessageEmbed()
 	.setColor('#8B008B')
-	.setAuthor('Add Me: Code im2rnado')
-	.setFooter('BlazeBot ❤ Use Code: im2rnado');
+	.setFooter('BlazeBot ❤ EPIC: Code im2rnado');
 
 bot.once('ready', () => {
 	bot.user.setActivity('Starting...', { type: 'LISTENING' });
