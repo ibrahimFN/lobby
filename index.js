@@ -145,7 +145,13 @@ bot.once('ready', () => {
 	};
 
 	bot.on('message', message => {
-		if (message.content.indexOf(process.env.PREFIX) !== 0 || message.author.bot) return;
+		if (message.content.indexOf(process.env.PREFIX) !== 0) {
+                       const embed1010 = new Discord.MessageEmbed()
+			.setColor('RANDOM')
+			.setTitle(`The prefix is **${process.env.PREFIX}**`)
+			.setFooter('Need Help? Use .help');
+		return message.channel.send(embed1010);
+                }
 
 		const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/);
 		const command = args.shift().toLowerCase();
