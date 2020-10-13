@@ -166,7 +166,7 @@ bot.once('ready', () => {
 			if (skin) {
 				client.party.me.setOutfit(skin.id);
 				embed.setTitle(`Set skin to **${skin.name}**`);
-				embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${skin.id}/icon.png`);
+				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${skin.id}/icon.png?b=true`);
 				message.channel.send(embed);
 			}
 			else {
@@ -179,7 +179,7 @@ bot.once('ready', () => {
 			if (!args.length) return embed.setTitle('Please enter a valid cid!');
 			client.party.me.setOutfit(content);
 			embed.setTitle(`Set skin to\n**${content}**`);
-			embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${content}/icon.png`);
+			embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${content}/icon.png?b=true`);
 			message.channel.send(embed);
 		}
 		else if (command === 'emote' || command === 'dance') {
@@ -188,7 +188,7 @@ bot.once('ready', () => {
 			if (emote) {
 				client.party.me.setEmote(emote.id);
 				embed.setTitle(`Set emote to **${emote.name}**`);
-				embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${emote.id}/icon.png`);
+				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${emote.id}/icon.png?b=true`);
 				message.channel.send(embed);
 			}
 			else {
@@ -201,7 +201,7 @@ bot.once('ready', () => {
 			if (!args.length) return embed.setTitle('Please enter a valid eid!');
 			client.party.me.setEmote(content);
 			embed.setTitle(`Set emote to **${content}**`);
-			embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${content}/icon.png`);
+			embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${content}/icon.png?b=true`);
 			message.channel.send(embed);
 		}
 		else if (command === 'backbling' || command === 'backpack') {
@@ -210,7 +210,7 @@ bot.once('ready', () => {
 			if (backbling) {
 				client.party.me.setBackpack(backbling.id);
 				embed.setTitle(`Set backbling to **${backbling.name}**`);
-				embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${backbling.id}/icon.png`);
+				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${backbling.id}/icon.png?b=true`);
 				message.channel.send(embed);
 			}
 			else {
@@ -223,7 +223,7 @@ bot.once('ready', () => {
 			if (!args.length) return embed.setTitle('Please enter a valid bid!');
 			client.party.me.setBackpack(content);
 			embed.setTitle(`Set backbling to **${content}**`);
-			embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${content}/icon.png`);
+			embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${content}/icon.png?b=true`);
 			message.channel.send(embed);
 		}
 		else if (command === 'pickaxe') {
@@ -233,7 +233,7 @@ bot.once('ready', () => {
 				client.party.me.setPickaxe(pickaxe.id);
 				client.party.me.setEmote('EID_IceKing');
 				embed.setTitle(`Set pickaxe to **${pickaxe.name}**`);
-				embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${pickaxe.id}/icon.png`);
+				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${pickaxe.id}/icon.png?b=true`);
 				message.channel.send(embed);
 			}
 			else {
@@ -247,7 +247,7 @@ bot.once('ready', () => {
 			client.party.me.setPickaxe(content);
 			client.party.me.setEmote('EID_IceKing');
 			embed.setTitle(`Set pickaxe to **${content}**`);
-			embed.setThumbnail(`https://fortnite-api.com/images/cosmetics/br/${content}/icon.png`);
+			embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${content}/icon.png?b=true`);
 			message.channel.send(embed);
 		}
 		else if (command === 'ready') {
@@ -265,19 +265,19 @@ bot.once('ready', () => {
 		else if (command === 'purpleskull' || command === 'ps') {
 			client.party.me.setOutfit('CID_030_Athena_Commando_M_Halloween', [{ channel: 'ClothingColor', variant: 'Mat1' }]);
 			embed.setTitle('Set skin to **Purple Skull**');
-			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_030_Athena_Commando_M_Halloween/icon.png');
+			embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_030_Athena_Commando_M_Halloween/icon.png?b=true');
 			message.channel.send(embed);
 		}
 		else if (command === 'pinkghoul' || command === 'pg') {
 			client.party.me.setOutfit('CID_029_Athena_Commando_F_Halloween', [{ channel: 'Material', variant: 'Mat3' }]);
 			embed.setTitle('Set skin to **Pink Ghoul**');
-			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_029_Athena_Commando_F_Halloween/icon.png');
+			embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_029_Athena_Commando_F_Halloween/icon.png?b=true');
 			message.channel.send(embed);
 		}
 		else if (command === 'hologram') {
 			client.party.me.setOutfit('CID_VIP_Athena_Commando_M_GalileoGondola_SG');
 			embed.setTitle('Set skin to **Hologram**');
-			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_VIP_Athena_Commando_M_GalileoGondola_SG/icon.png');
+			embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_VIP_Athena_Commando_M_GalileoGondola_SG/icon.png?b=true');
 			message.channel.send(embed);
 		}
 		else if (command === 'leaked') {
@@ -285,67 +285,67 @@ bot.once('ready', () => {
 			if (number == 0) {
 				client.party.me.setOutfit('CID_892_Athena_Commando_F_VampireCasual');
 				embed.setTitle('Set skin to **Midnight Dusk**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_892_Athena_Commando_F_VampireCasual/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_892_Athena_Commando_F_VampireCasual/icon.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 1) {
 				client.party.me.setOutfit('CID_829_Athena_Commando_M_Valet');
 				embed.setTitle('Set skin to **Storm Racer**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_829_Athena_Commando_M_Valet/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_829_Athena_Commando_M_Valet/icon.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 2) {
 				client.party.me.setOutfit('CID_893_Athena_Commando_F_BlackWidowJacket');
 				embed.setTitle('Set skin to **Arachne Couture**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_893_Athena_Commando_F_BlackWidowJacket/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_893_Athena_Commando_F_BlackWidowJacket/icon.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 3) {
 				client.party.me.setOutfit('CID_895_Athena_Commando_M_DeliSandwich');
 				embed.setTitle('Set skin to **Daredevil**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_895_Athena_Commando_M_DeliSandwich/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_895_Athena_Commando_M_DeliSandwich/icon.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 4) {
 				client.party.me.setOutfit('CID_898_Athena_Commando_M_FlowerSkeleton');
 				embed.setTitle('Set skin to **Grave**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_898_Athena_Commando_M_FlowerSkeleton/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_898_Athena_Commando_M_FlowerSkeleton/icon.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 5) {
 				client.party.me.setOutfit('CID_899_Athena_Commando_F_Poison');
 				embed.setTitle('Set skin to **Grimoire**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_899_Athena_Commando_F_Poison/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_899_Athena_Commando_F_Poison/icon.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 6) {
 				client.party.me.setOutfit('CID_896_Athena_Commando_F_SpookyNeon');
 				embed.setTitle('Set skin to **Violet**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_896_Athena_Commando_F_SpookyNeon/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_896_Athena_Commando_F_SpookyNeon/icon.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 7) {
 				client.party.me.setOutfit('CID_828_Athena_Commando_F_Valet');
 				embed.setTitle('Set skin to **Pitstop**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_828_Athena_Commando_F_Valet/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_828_Athena_Commando_F_Valet/icon.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 8) {
 				client.party.me.setOutfit('CID_894_Athena_Commando_M_Palespooky');
 				embed.setTitle('Set skin to **Gnash**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_894_Athena_Commando_M_Palespooky/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_894_Athena_Commando_M_Palespooky/icon.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 9) {
 				client.party.me.setOutfit('CID_897_Athena_Commando_F_DarkBomberSummer');
 				embed.setTitle('Set skin to **Nightsurf Bomber**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_897_Athena_Commando_F_DarkBomberSummer/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_897_Athena_Commando_F_DarkBomberSummer/icon.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 10) {
 				client.party.me.setOutfit('CID_757_Athena_Commando_F_WildCat');
 				embed.setTitle('Set skin to **Wildcat**');
-				embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_757_Athena_Commando_F_WildCat/icon.png');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_757_Athena_Commando_F_WildCat/icon.png?b=true');
 				message.channel.send(embed);
 			}
 		}
