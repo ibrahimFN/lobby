@@ -352,6 +352,7 @@ bot.once('ready', () => {
 			if (!user) return embed.setTitle('Please provide a user to invite.');
 			client.party.invite(user);
 			embed.setTitle(`**${user}** has been invited`);
+			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
 			message.channel.send(embed);
 		}
 		else if (command === 'add') {
@@ -359,6 +360,7 @@ bot.once('ready', () => {
 			if (!user) return embed.setTitle('Please provide a user to add.');
 			client.addFriend(user);
 			embed.setTitle(`Friend request has been sent to **${user}**`);
+			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
 			message.channel.send(embed);
 		}
 		else if (command === 'gift') {
@@ -366,6 +368,14 @@ bot.once('ready', () => {
 			if (!user) return embed.setTitle('Please provide a user to gift.');
 			client.party.me.setEmote('EID_NeverGonna');
 			embed.setTitle(`I gifted **${user}** the whole shop! If it isn't there, make sure you're using Code: im2rnado in the Item Shop!`);
+			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+			message.channel.send(embed);
+		}
+		else if (command === 'help') {
+			embed.setTitle(':mailbox_with_mail: Hey! Want some help?');
+			embed.setDescription('[Press Me](https://github.com/Im2rnado/Llama47-Help)');
+			embed.setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
+			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
 			message.channel.send(embed);
 		}
 	});
