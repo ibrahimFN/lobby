@@ -145,6 +145,9 @@ bot.once('ready', () => {
 	};
 
 	bot.on('message', message => {
+
+                if (message.author.bot) return;
+
 		if (message.content.indexOf(process.env.PREFIX) !== 0) {
                        const embed1010 = new Discord.MessageEmbed()
 			.setColor('RANDOM')
