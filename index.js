@@ -373,7 +373,7 @@ bot.once('ready', () => {
 		}
 		else if (command === 'help') {
 			embed.setTitle(':mailbox_with_mail: Hey! Want some help?');
-			embed.setDescription('[Press Me](https://github.com/Im2rnado/Llama47-Help)');
+			embed.setDescription('[Press Me](https://github.com/Im2rnado/Blaze-Help)');
 			embed.setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
 			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
 			message.channel.send(embed);
