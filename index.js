@@ -234,11 +234,68 @@ bot.once('ready', () => {
 			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_029_Athena_Commando_F_Halloween/icon.png');
 			message.channel.send(embed);
 		}
-		else if (command === 'midnightdusk') {
-			client.party.me.setOutfit('CID_892_Athena_Commando_F_VampireCasual', [{ channel: 'Material', variant: 'Mat3' }]);
+		else if (command === 'leaked') {
+			const number = Math.floor(Math.random() * 10);
+		if (number == 0) {
+			client.party.me.setOutfit('CID_892_Athena_Commando_F_VampireCasual');
 			embed.setTitle('Set skin to Midnight Dusk');
 			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_892_Athena_Commando_F_VampireCasual/icon.png');
 			message.channel.send(embed);
+		}
+		if (number == 1) {
+			client.party.me.setOutfit('CID_829_Athena_Commando_M_Valet');
+			embed.setTitle('Set skin to Storm Racer');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_829_Athena_Commando_M_Valet/icon.png');
+			message.channel.send(embed);
+		}
+		if (number == 2) {
+			client.party.me.setOutfit('CID_893_Athena_Commando_F_BlackWidowJacket');
+			embed.setTitle('Set skin to Arachne Couture');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_893_Athena_Commando_F_BlackWidowJacket/icon.png');
+			message.channel.send(embed);
+		}
+		if (number == 3) {
+			client.party.me.setOutfit('CID_895_Athena_Commando_M_DeliSandwich');
+			embed.setTitle('Set skin to Daredevil');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_895_Athena_Commando_M_DeliSandwich/icon.png');
+			message.channel.send(embed);
+		}
+		if (number == 4) {
+			client.party.me.setOutfit('CID_898_Athena_Commando_M_FlowerSkeleton');
+			embed.setTitle('Set skin to Grave');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_898_Athena_Commando_M_FlowerSkeleton/icon.png');
+			message.channel.send(embed);
+		}
+		if (number == 5) {
+			client.party.me.setOutfit('CID_899_Athena_Commando_F_Poison');
+			embed.setTitle('Set skin to Grimoire');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_899_Athena_Commando_F_Poison/icon.png');
+			message.channel.send(embed);
+		}
+		if (number == 6) {
+			client.party.me.setOutfit('CID_896_Athena_Commando_F_SpookyNeon');
+			embed.setTitle('Set skin to Violet');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_896_Athena_Commando_F_SpookyNeon/icon.png');
+			message.channel.send(embed);
+		}
+		if (number == 7) {
+			client.party.me.setOutfit('CID_828_Athena_Commando_F_Valet');
+			embed.setTitle('Set skin to Pitstop');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_828_Athena_Commando_F_Valet/icon.png');
+			message.channel.send(embed);
+		}
+		if (number == 8) {
+			client.party.me.setOutfit('CID_894_Athena_Commando_M_Palespooky');
+			embed.setTitle('Set skin to Gnash');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_894_Athena_Commando_M_Palespooky/icon.png');
+			message.channel.send(embed);
+		}
+		if (number == 9) {
+			client.party.me.setOutfit('CID_897_Athena_Commando_F_DarkBomberSummer');
+			embed.setTitle('Set skin to Nightsurf Bomber');
+			embed.setThumbnail('https://fortnite-api.com/images/cosmetics/br/CID_897_Athena_Commando_F_DarkBomberSummer/icon.png');
+			message.channel.send(embed);
+		}
 		}
 		else if (command === 'level') {
 			client.party.me.setLevel(parseInt(content, 10));
