@@ -4,6 +4,21 @@ const { get } = require('request-promise');
 require('dotenv').config();
 const Discord = require('discord.js');
 
+const Rarities = {
+	Common: '#B1B1B1',
+	Uncommon: '#5BFD00',
+	Rare: '#00FFF6',
+	Epic: '#D505FF',
+	Legendary: '#F68B20',
+	'Icon Series': '#00FFF6',
+	'Shadow Series': '#111111',
+	'Slurp Series': '#0c9ea6',
+	'Star Wars Series': '#010c62',
+	'MARVEL SERIES': '#e20604',
+	'DC SERIES': '#002dd0',
+	LavaSeries: '#f49d09',
+};
+
 const bot = new Discord.Client({ partials: ['MESSAGE', 'USER', 'REACTION'] });
 bot.commands = new Discord.Collection();
 bot.sessions = new Discord.Collection();
@@ -146,15 +161,15 @@ bot.once('ready', () => {
 
 	bot.on('message', message => {
 
-                if (message.author.bot) return;
+		if (message.author.bot) return;
 
 		if (message.content.startsWith('!') || message.content.startsWith('+') || message.content.startsWith('?')) {
-                       const embed1010 = new Discord.MessageEmbed()
-			.setColor('RANDOM')
-			.setTitle(`The prefix is **${process.env.PREFIX}**`)
-			.setFooter('Need Help? Use .help');
-		return message.channel.send(embed1010);
-                }
+			const embed1010 = new Discord.MessageEmbed()
+				.setColor('RANDOM')
+				.setTitle(`The prefix is **${process.env.PREFIX}**`)
+				.setFooter('Need Help? Use .help');
+			return message.channel.send(embed1010);
+		}
 
 		const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/);
 		const command = args.shift().toLowerCase();
@@ -166,6 +181,8 @@ bot.once('ready', () => {
 			if (skin) {
 				client.party.me.setOutfit(skin.id);
 				embed.setTitle(`Set skin to **${skin.name}**`);
+				console.log(skin.rarity.displayValue);
+				embed.setColor(Rarities[skin.rarity.displayValue]);
 				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${skin.id}.png?b=true`);
 				message.channel.send(embed);
 			}
@@ -188,6 +205,7 @@ bot.once('ready', () => {
 			if (emote) {
 				client.party.me.setEmote(emote.id);
 				embed.setTitle(`Set emote to **${emote.name}**`);
+				embed.setColor(Rarities[emote.rarity.displayValue]);
 				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${emote.id}.png?b=true`);
 				message.channel.send(embed);
 			}
@@ -210,6 +228,7 @@ bot.once('ready', () => {
 			if (backbling) {
 				client.party.me.setBackpack(backbling.id);
 				embed.setTitle(`Set backbling to **${backbling.name}**`);
+				embed.setColor(Rarities[backbling.rarity.displayValue]);
 				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${backbling.id}.png?b=true`);
 				message.channel.send(embed);
 			}
@@ -233,6 +252,7 @@ bot.once('ready', () => {
 				client.party.me.setPickaxe(pickaxe.id);
 				client.party.me.setEmote('EID_IceKing');
 				embed.setTitle(`Set pickaxe to **${pickaxe.name}**`);
+				embed.setColor(Rarities[pickaxe.rarity.displayValue]);
 				embed.setThumbnail(`https://blobry.herokuapp.com/images/cosmetics/br/${pickaxe.id}.png?b=true`);
 				message.channel.send(embed);
 			}
@@ -382,9 +402,9 @@ bot.once('ready', () => {
 			message.channel.send(embed);
 		}
 		else if (command === 'help') {
-                        const embed1 = new Discord.MessageEmbed();
-                        embed1.setColor('#E38C2D');
-	                embed1.setFooter('BlazeBot ❤ EPIC: Code im2rnado');
+			const embed1 = new Discord.MessageEmbed();
+			embed1.setColor('#E38C2D');
+			embed1.setFooter('BlazeBot ❤ EPIC: Code im2rnado');
 			embed1.setTitle(':mailbox_with_mail: Hey! Want some help?');
 			embed1.setDescription('[Press Me](https://github.com/Im2rnado/Blaze-Help)');
 			embed1.setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
