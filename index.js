@@ -36,7 +36,7 @@ bot.once('ready', () => {
 			status: 'Use Code: im2rnado',
 			friendaccept: true,
 			inviteaccept: true,
-			platform: 'IOS',
+			platform: 'WIN',
 		}, null, 2));
 		console.log('WARNING: config.json was missing and created. Please adjust it to your preference.');
 		return;
@@ -97,7 +97,7 @@ bot.once('ready', () => {
 	console.log(`Bot started as ${client.user.displayName}!`);
 
 	function randomStatus() {
-		const status = ['People who use code: im2rnado', `${bot.users.cache.size} users`];
+		const status = ['Code: im2rnado', `${bot.users.cache.size} users`];
 		const rstatus = Math.floor(Math.random() * status.length);
 
 		// You can change the "WATCHING" into STREAMING, LISTENING, and PLAYING.
