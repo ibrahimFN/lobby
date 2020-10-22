@@ -408,9 +408,11 @@ bot.once('ready', () => {
 		else if (command === 'gift') {
 			const user = args.join(' ');
 			if (!user) {embed.setTitle('Please provide a user to gift.')};
+                        else {
 			client.party.me.setEmote('EID_NeverGonna');
 			embed.setTitle(`I gifted **${user}** the whole shop! If it isn't there, make sure you're using Code: im2rnado in the Item Shop!`);
 			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+                        }
 			message.channel.send(embed);
 		}
 		else if (command === 'help') {
