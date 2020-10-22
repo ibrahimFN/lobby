@@ -301,7 +301,7 @@ bot.once('ready', () => {
 			message.channel.send(embed);
 		}
 		else if (command === 'leaked') {
-			const number = Math.floor(Math.random() * 12);
+			const number = Math.floor(Math.random() * 11);
 			if (number == 0) {
 				client.party.me.setOutfit('CID_900_Athena_Commando_M_Famine');
 				embed.setTitle('Set skin to **Headlock**');
@@ -366,12 +366,6 @@ bot.once('ready', () => {
 				client.party.me.setOutfit('CID_920_Athena_Commando_M_PartyTrooper');
 				embed.setTitle('Set skin to **Party Trooper**');
 				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_920_Athena_Commando_M_PartyTrooper.png?b=true');
-				message.channel.send(embed);
-			}
-                        if (number == 11) {
-				client.party.me.setOutfit('CID_900_Athena_Commando_M_Famine');
-				embed.setTitle('Set skin to **Zombie Midas**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_900_Athena_Commando_M_Famine.png?b=true');
 				message.channel.send(embed);
 			}
 		}
