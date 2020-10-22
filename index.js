@@ -315,7 +315,7 @@ bot.once('ready', () => {
 				message.channel.send(embed);
 			}
 			if (number == 2) {
-				client.party.me.setOutfit(CID_902_Athena_Commando_M_PumpkinPunk');
+				client.party.me.setOutfit('CID_902_Athena_Commando_M_PumpkinPunk');
 				embed.setTitle('Set skin to **Punk**');
 				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_902_Athena_Commando_M_PumpkinPunk.png?b=true');
 				message.channel.send(embed);
