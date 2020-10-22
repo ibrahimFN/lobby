@@ -301,71 +301,77 @@ bot.once('ready', () => {
 			message.channel.send(embed);
 		}
 		else if (command === 'leaked') {
-			const number = Math.floor(Math.random() * 11);
+			const number = Math.floor(Math.random() * 12);
 			if (number == 0) {
-				client.party.me.setOutfit('CID_892_Athena_Commando_F_VampireCasual');
-				embed.setTitle('Set skin to **Midnight Dusk**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_892_Athena_Commando_F_VampireCasual.png?b=true');
+				client.party.me.setOutfit('CID_900_Athena_Commando_M_Famine');
+				embed.setTitle('Set skin to **Headlock**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_900_Athena_Commando_M_Famine.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 1) {
-				client.party.me.setOutfit('CID_829_Athena_Commando_M_Valet');
-				embed.setTitle('Set skin to **Storm Racer**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_829_Athena_Commando_M_Valet.png?b=true');
+				client.party.me.setOutfit('CID_901_Athena_Commando_F_PumpkinSpice');
+				embed.setTitle('Set skin to **Patch**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_901_Athena_Commando_F_PumpkinSpice.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 2) {
-				client.party.me.setOutfit('CID_893_Athena_Commando_F_BlackWidowJacket');
-				embed.setTitle('Set skin to **Arachne Couture**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_893_Athena_Commando_F_BlackWidowJacket.png?b=true');
+				client.party.me.setOutfit(CID_902_Athena_Commando_M_PumpkinPunk');
+				embed.setTitle('Set skin to **Punk**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_902_Athena_Commando_M_PumpkinPunk.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 3) {
-				client.party.me.setOutfit('CID_895_Athena_Commando_M_DeliSandwich');
-				embed.setTitle('Set skin to **Daredevil**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_895_Athena_Commando_M_DeliSandwich.png?b=true');
+				client.party.me.setOutfit('CID_903_Athena_Commando_F_Frankie');
+				embed.setTitle('Set skin to **Ravina**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_903_Athena_Commando_F_Frankie.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 4) {
-				client.party.me.setOutfit('CID_898_Athena_Commando_M_FlowerSkeleton');
-				embed.setTitle('Set skin to **Grave**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_898_Athena_Commando_M_FlowerSkeleton.png?b=true');
+				client.party.me.setOutfit('CID_904_Athena_Commando_M_Jekyll');
+				embed.setTitle('Set skin to **The Good Doctor**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_904_Athena_Commando_M_Jekyll.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 5) {
-				client.party.me.setOutfit('CID_899_Athena_Commando_F_Poison');
-				embed.setTitle('Set skin to **Grimoire**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_899_Athena_Commando_F_Poison.png?b=true');
+				client.party.me.setOutfit('CID_915_Athena_Commando_F_Ravenquillskull');
+				embed.setTitle('Set skin to **Bone Ravage**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_915_Athena_Commando_F_Ravenquillskull.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 6) {
-				client.party.me.setOutfit('CID_896_Athena_Commando_F_SpookyNeon');
-				embed.setTitle('Set skin to **Violet**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_896_Athena_Commando_F_SpookyNeon.png?b=true');
+				client.party.me.setOutfit('CID_916_Athena_Commando_F_Fuzzybearskull');
+				embed.setTitle('Set skin to **Skull Squad Leader**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_916_Athena_Commando_F_Fuzzybearskull.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 7) {
-				client.party.me.setOutfit('CID_828_Athena_Commando_F_Valet');
-				embed.setTitle('Set skin to **Pitstop**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_828_Athena_Commando_F_Valet.png?b=true');
+				client.party.me.setOutfit('CID_917_Athena_Commando_M_Durrburgerskull');
+				embed.setTitle('Set skin to **Bone Boss**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_917_Athena_Commando_M_Durrburgerskull.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 8) {
-				client.party.me.setOutfit('CID_894_Athena_Commando_M_Palespooky');
-				embed.setTitle('Set skin to **Gnash**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_894_Athena_Commando_M_Palespooky.png?b=true');
+				client.party.me.setOutfit('CID_918_Athena_Commando_M_Teriyakifishskull');
+				embed.setTitle('Set skin to **Fishskull**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_918_Athena_Commando_M_Teriyakifishskull.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 9) {
-				client.party.me.setOutfit('CID_897_Athena_Commando_F_DarkBomberSummer');
-				embed.setTitle('Set skin to **Nightsurf Bomber**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_897_Athena_Commando_F_DarkBomberSummer.png?b=true');
+				client.party.me.setOutfit('CID_919_Athena_Commando_F_BabaYaga');
+				embed.setTitle('Set skin to **Baba Yaga**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_919_Athena_Commando_F_BabaYaga.png?b=true');
 				message.channel.send(embed);
 			}
 			if (number == 10) {
-				client.party.me.setOutfit('CID_757_Athena_Commando_F_WildCat');
-				embed.setTitle('Set skin to **Wildcat**');
-				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_757_Athena_Commando_F_WildCat.png?b=true');
+				client.party.me.setOutfit('CID_920_Athena_Commando_M_PartyTrooper');
+				embed.setTitle('Set skin to **Party Trooper**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_920_Athena_Commando_M_PartyTrooper.png?b=true');
+				message.channel.send(embed);
+			}
+                        if (number == 11) {
+				client.party.me.setOutfit('CID_900_Athena_Commando_M_Famine');
+				embed.setTitle('Set skin to **Zombie Midas**');
+				embed.setThumbnail('https://blobry.herokuapp.com/images/cosmetics/br/CID_900_Athena_Commando_M_Famine.png?b=true');
 				message.channel.send(embed);
 			}
 		}
