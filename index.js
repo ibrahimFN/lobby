@@ -377,31 +377,37 @@ bot.once('ready', () => {
 		}
 		else if (command === 'level') {
 			const levelno = args[0];
-			if (!levelno || isNaN(levelno)) return embed.setTitle('Please enter a level number!');
+			if (!levelno || isNaN(levelno)) {embed.setTitle('Please enter a level number!')};
+                        else {
 			client.party.me.setLevel(parseInt(content, 10));
 			embed.setTitle(`Set level to ${content}`);
 			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+                        };
 			message.channel.send(embed);
 		}
 		else if (command === 'invite') {
 			const user = args.join(' ');
-			if (!user) return embed.setTitle('Please provide a user to invite.');
+			if (!user) {embed.setTitle('Please provide a user to invite.')};
+                        else {
 			client.party.invite(user);
 			embed.setTitle(`**${user}** has been invited`);
 			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+                        }
 			message.channel.send(embed);
 		}
 		else if (command === 'add') {
 			const user = args.join(' ');
-			if (!user) return embed.setTitle('Please provide a user to add.');
+			if (!user) {embed.setTitle('Please provide a user to add.')};
+                        else {
 			client.addFriend(user);
 			embed.setTitle(`Friend request has been sent to **${user}**`);
 			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
+                        }
 			message.channel.send(embed);
 		}
 		else if (command === 'gift') {
 			const user = args.join(' ');
-			if (!user) return embed.setTitle('Please provide a user to gift.');
+			if (!user) {embed.setTitle('Please provide a user to gift.')};
 			client.party.me.setEmote('EID_NeverGonna');
 			embed.setTitle(`I gifted **${user}** the whole shop! If it isn't there, make sure you're using Code: im2rnado in the Item Shop!`);
 			embed.setThumbnail('https://discordapp.com/assets/8becd37ab9d13cdfe37c08c496a9def3.png');
