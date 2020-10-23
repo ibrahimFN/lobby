@@ -163,7 +163,7 @@ bot.once('ready', () => {
 
 		if (message.author.bot) return;
 
-		if (message.content.startsWith('!') || message.content.startsWith('+') || message.content.startsWith('?')) {
+		if (message.content.indexOf(process.env.PREFIX) !== 0) {
 			const embed1010 = new Discord.MessageEmbed()
 				.setColor('RANDOM')
 				.setTitle(`The prefix is **${process.env.PREFIX}**`)
